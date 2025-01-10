@@ -391,3 +391,192 @@ body {
 .activity-list {
     margin-top: 2rem;
 }
+
+/* Update responsive design section */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .app-header {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-header h2 {
+    font-size: 1rem;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* Carousel adjustments */
+  .carousel {
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .carousel button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  /* Activity card adjustments */
+  .activity-card {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .activity-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .activity-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .activity-card h3::after {
+    width: 40px;
+    bottom: -1rem;
+  }
+
+  /* Map container adjustments */
+  .map-container {
+    margin: 1.5rem 0;
+    height: 200px;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
+
+  /* Activity list adjustments */
+  .activity-list {
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+
+  .activity-item {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .activity-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .bullet {
+    font-size: 1.2rem;
+  }
+
+  /* Password gate adjustments */
+  .password-gate {
+    padding: 1rem;
+  }
+
+  .password-gate form {
+    padding: 1.5rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .password-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .password-gate button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .app-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .activity-card {
+    border-radius: 15px;
+  }
+
+  /* Hide carousel buttons on very small screens, rely on swipe */
+  .carousel button {
+    display: none;
+  }
+
+  /* Add visual hint for swipe functionality */
+  .carousel::after {
+    content: '← Swipe →';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--textLight);
+    opacity: 0.7;
+    animation: fadeInOut 2s infinite;
+  }
+}
+
+/* Add swipe hint animation */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Improve touch targets */
+@media (hover: none) and (pointer: coarse) {
+  .activity-item {
+    min-height: 44px; /* Minimum touch target size */
+  }
+
+  .password-input, 
+  .password-gate button {
+    min-height: 44px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .activity-item:hover {
+    transform: none;
+  }
+
+  .map-container:hover iframe {
+    transform: none;
+  }
+}
+
+/* Add pull-to-refresh visual */
+@media (max-width: 768px) {
+  .carousel {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .activity-card {
+    transition: transform 0.3s ease;
+  }
+
+  .activity-card.swiping {
+    transform: scale(0.98);
+  }
+}

@@ -21,7 +21,7 @@ const isToday = (dateString) => {
     return dateString === today;
 };
 
-function TodayActivities({ date }) {
+function TodayActivities({ date, className }) {
     const today = itinerary.find(day => day.date === date);
 
     if (!today) {
@@ -72,7 +72,7 @@ function TodayActivities({ date }) {
     };
 
     return (
-        <div className="activity-card">
+        <div className={`activity-card ${className}`}>
             <h1>Day {today.dayNumber}</h1>
             <h3>{today.location}</h3>
             <LocationMap location={today.location} />
@@ -86,6 +86,7 @@ function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
+    const [isSwiping, setIsSwiping] = useState(false);
 
     // Minimum swipe distance (in px)
     const minSwipeDistance = 50;
@@ -119,6 +120,7 @@ function App() {
 
     // Handle touch events
     const onTouchStart = (e) => {
+        setIsSwiping(true);
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     };
@@ -128,6 +130,7 @@ function App() {
     };
 
     const onTouchEnd = () => {
+        setIsSwiping(false);
         if (!touchStart || !touchEnd) return;
         
         const distance = touchStart - touchEnd;
@@ -159,7 +162,10 @@ function App() {
                 onTouchEnd={onTouchEnd}
             >
                 <button onClick={() => changeDate(-1)}>&larr;</button>
-                <TodayActivities date={showDate} />
+                <TodayActivities 
+                    date={showDate} 
+                    className={isSwiping ? 'activity-card swiping' : 'activity-card'}
+                />
                 <button onClick={() => changeDate(1)}>&rarr;</button>
             </div>
         </>
