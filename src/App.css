@@ -82,6 +82,7 @@ body {
   touch-action: pan-y pinch-zoom;
   user-select: none;
   -webkit-user-select: none;
+  position: relative;
 }
 
 .carousel button {
@@ -121,6 +122,7 @@ body {
   margin: 0 auto;
   animation: slideIn 0.3s ease-out;
   border: none;
+  transition: transform 0.3s ease;
 }
 
 .activity-card::before {
@@ -579,4 +581,17 @@ body {
   .activity-card.swiping {
     transform: scale(0.98);
   }
+}
+
+/* Ensure the carousel container doesn't interfere with swipes */
+@media (max-width: 768px) {
+    .carousel {
+        overflow: visible;
+        gap: 0.5rem;
+    }
+
+    .activity-card {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+    }
 }

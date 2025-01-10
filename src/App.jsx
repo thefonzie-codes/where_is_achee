@@ -119,21 +119,18 @@ function App() {
         setShowDate(newDate.toISOString().split('T')[0]);
     };
 
-    // Handle touch events
-    const onTouchStart = (e) => {
-        setIsSwiping(true);
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
+    const handleTouchStart = (e) => {
+        setTouchStart(e.touches[0].clientX);
+        setTouchEnd(null); // Reset touchEnd
     };
 
-    const onTouchMove = (e) => {
-        setTouchEnd(e.targetTouches[0].clientX);
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.touches[0].clientX);
     };
 
-    const onTouchEnd = () => {
-        setIsSwiping(false);
+    const handleTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
-        
+
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
@@ -143,6 +140,10 @@ function App() {
         } else if (isRightSwipe) {
             changeDate(-1);
         }
+
+        // Reset values
+        setTouchStart(null);
+        setTouchEnd(null);
     };
 
     const handleCorrectPassword = () => {
@@ -158,14 +159,14 @@ function App() {
             </header>
             <div 
                 className="carousel"
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
             >
                 <button onClick={() => changeDate(-1)}>&larr;</button>
                 <TodayActivities 
                     date={showDate} 
-                    className={isSwiping ? 'activity-card swiping' : 'activity-card'}
+                    className={touchEnd ? 'swiping' : ''}
                 />
                 <button onClick={() => changeDate(1)}>&rarr;</button>
             </div>
