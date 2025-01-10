@@ -34,10 +34,11 @@ function TodayActivities({ date, className }) {
             return (
                 <div className="activity-card">
                     <h1>Trip not started</h1>
+                    <h3>The adventure begins soon!</h3>
                     <div className="activity-list">
                         <div className="activity-item">
                             <span className="bullet">•</span>
-                            <p>The adventure begins on {tripStart}!</p>
+                            <p>The journey starts on {tripStart}</p>
                         </div>
                     </div>
                 </div>
@@ -48,6 +49,7 @@ function TodayActivities({ date, className }) {
             return (
                 <div className="activity-card">
                     <h1>Achee is home!</h1>
+                    <h3>The adventure has ended</h3>
                     <div className="activity-list">
                         <div className="activity-item">
                             <span className="bullet">•</span>
@@ -85,12 +87,6 @@ function TodayActivities({ date, className }) {
 function App() {
     const [showDate, setShowDate] = useState(new Date(Date.now()).toISOString().split('T')[0]);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [touchStart, setTouchStart] = useState(null);
-    const [touchEnd, setTouchEnd] = useState(null);
-    const [isSwiping, setIsSwiping] = useState(false);
-
-    // Minimum swipe distance (in px)
-    const minSwipeDistance = 50;
 
     useEffect(() => {
         initializeTheme();
@@ -110,40 +106,13 @@ function App() {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [showDate]); // Add showDate as dependency to ensure latest state
+    }, [showDate]);
 
     const changeDate = (direction) => {
         const currentDate = new Date(showDate);
         const newDate = new Date(currentDate);
         newDate.setDate(currentDate.getDate() + direction);
         setShowDate(newDate.toISOString().split('T')[0]);
-    };
-
-    const handleTouchStart = (e) => {
-        setTouchStart(e.touches[0].clientX);
-        setTouchEnd(null); // Reset touchEnd
-    };
-
-    const handleTouchMove = (e) => {
-        setTouchEnd(e.touches[0].clientX);
-    };
-
-    const handleTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-
-        const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
-
-        if (isLeftSwipe) {
-            changeDate(1);
-        } else if (isRightSwipe) {
-            changeDate(-1);
-        }
-
-        // Reset values
-        setTouchStart(null);
-        setTouchEnd(null);
     };
 
     const handleCorrectPassword = () => {
@@ -157,17 +126,9 @@ function App() {
                 <h2>{showDate}</h2>
                 <p>South America Edition</p>
             </header>
-            <div 
-                className="carousel"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
+            <div className="carousel">
                 <button onClick={() => changeDate(-1)}>&larr;</button>
-                <TodayActivities 
-                    date={showDate} 
-                    className={touchEnd ? 'swiping' : ''}
-                />
+                <TodayActivities date={showDate} />
                 <button onClick={() => changeDate(1)}>&rarr;</button>
             </div>
         </>
