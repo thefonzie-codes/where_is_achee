@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { peruTheme } from './theme';
 import PasswordGate from './components/PasswordGate';
 import LocationMap from './components/LocationMap';
+import MachuPicchuIcon from './components/MachuPicchuIcon';
 
 // Add theme variables to CSS
 const initializeTheme = () => {
