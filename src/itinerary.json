@@ -1,0 +1,359 @@
+[
+  {
+    "date": "2025-01-12",
+    "dayNumber": 1,
+    "location": "Lima",
+    "activities": [
+      "Arrive at any time.",
+      "Evening outing in Barranco neighborhood.",
+      "Welcome meeting with CEO and group."
+    ]
+  },
+  {
+    "date": "2025-01-13",
+    "dayNumber": 2,
+    "location": "Huacachina",
+    "activities": [
+      "Travel along Peru's coast to Huacachina.",
+      "Sandboarding on desert dunes at sunset."
+    ]
+  },
+  {
+    "date": "2025-01-14",
+    "dayNumber": 3,
+    "location": "Nazca",
+    "activities": [
+      "Optional morning excursion to Ballestas Islands.",
+      "Travel to Nazca.",
+      "Stop at a Pisco winery en route."
+    ]
+  },
+  {
+    "date": "2025-01-15",
+    "dayNumber": 4,
+    "location": "Overnight Bus to Arequipa",
+    "activities": [
+      "Optional flight over Nazca Lines.",
+      "Tour of Nazca Desert Cemetery and Pottery Studio.",
+      "Experience traditional Pachamanca lunch.",
+      "Overnight bus to Arequipa."
+    ]
+  },
+  {
+    "date": "2025-01-16",
+    "dayNumber": 5,
+    "location": "Arequipa",
+    "activities": [
+      "Explore Arequipa.",
+      "Optional visit to Santa Catalina Monastery.",
+      "Optional dining at local 'picanterías'."
+    ]
+  },
+  {
+    "date": "2025-01-17",
+    "dayNumber": 6,
+    "location": "Colca Canyon",
+    "activities": [
+      "Full-day tour of Colca Valley.",
+      "Overnight excursion to Colca Canyon.",
+      "Optional dip in hot springs."
+    ]
+  },
+  {
+    "date": "2025-01-18",
+    "dayNumber": 7,
+    "location": "Arequipa",
+    "activities": [
+      "Early visit to condor viewpoint.",
+      "Stops in local villages.",
+      "Return to Arequipa.",
+      "Evening outing in Calle Zela area."
+    ]
+  },
+  {
+    "date": "2025-01-19",
+    "dayNumber": 8,
+    "location": "Overnight Bus to Cusco",
+    "activities": [
+      "Explore Arequipa.",
+      "Optional city tour or museum visits.",
+      "Overnight bus to Cusco."
+    ]
+  },
+  {
+    "date": "2025-01-20",
+    "dayNumber": 9,
+    "location": "Cusco",
+    "activities": [
+      "Free day to explore Cusco.",
+      "Optional half-day city tour.",
+      "Optional Cusco cooking class."
+    ]
+  },
+  {
+    "date": "2025-01-21",
+    "dayNumber": 10,
+    "location": "Cusco",
+    "activities": [
+      "Free day in Cusco.",
+      "Optional Rainbow Mountain trek.",
+      "Optional mountain biking.",
+      "Visit to Inka Museum."
+    ]
+  },
+  {
+    "date": "2025-01-22",
+    "dayNumber": 11,
+    "location": "Ollantaytambo",
+    "activities": [
+      "Visit to women's weaving co-op in Ccaccaccollo.",
+      "Stop at Sacred Valley Brewery.",
+      "Travel to Ollantaytambo."
+    ]
+  },
+  {
+    "date": "2025-01-23",
+    "dayNumber": 12,
+    "location": "Inca Trail",
+    "activities": [
+      "Begin Inca Trail trek from km 82.",
+      "Hike through scenic landscapes.",
+      "Visit Llactapata ruins."
+    ]
+  },
+  {
+    "date": "2025-01-24",
+    "dayNumber": 13,
+    "location": "Inca Trail",
+    "activities": [
+      "Early start to climb to Dead Woman's Pass (4,198m).",
+      "Reach camp by early afternoon for rest."
+    ]
+  },
+  {
+    "date": "2025-01-25",
+    "dayNumber": 14,
+    "location": "Inca Trail",
+    "activities": [
+      "Cross Runquraqay Pass (3,950m).",
+      "Hike through cloud forest.",
+      "Reach Phuyupatamarca ruins."
+    ]
+  },
+  {
+    "date": "2025-01-26",
+    "dayNumber": 15,
+    "location": "Machu Picchu / Cusco",
+    "activities": [
+      "Pre-dawn hike to Sun Gate.",
+      "Guided tour of Machu Picchu.",
+      "Bus to Aguas Calientes.",
+      "Train back to Cusco.",
+      "Evening outing at a popular nightclub."
+    ]
+  },
+  {
+    "date": "2025-01-27",
+    "dayNumber": 16,
+    "location": "Cusco",
+    "activities": [
+      "Free day in Cusco.",
+      "Optional activities or relaxation."
+    ]
+  },
+  {
+    "date": "2025-01-28",
+    "dayNumber": 17,
+    "location": "Puno",
+    "activities": [
+      "Bus travel through Altiplano to Puno.",
+      "Evening arrival and exploration."
+    ]
+  },
+  {
+    "date": "2025-01-29",
+    "dayNumber": 18,
+    "location": "Lake Titicaca",
+    "activities": [
+      "Boat tour to Taquile Island.",
+      "Optional lunch and shopping.",
+      "Overnight homestay in local village."
+    ]
+  },
+  {
+    "date": "2025-01-30",
+    "dayNumber": 19,
+    "location": "Puno",
+    "activities": [
+      "Farewell to homestay family.",
+      "Visit Uros Islands.",
+      "Return to Puno.",
+      "Optional visit to Sillustani burial site.",
+      "Optional kayaking on Lake Titicaca."
+    ]
+  },
+  {
+    "date": "2025-01-31",
+    "dayNumber": 20,
+    "location": "La Paz",
+    "activities": [
+      "Full-day drive around Lake Titicaca.",
+      "Cross into Bolivia.",
+      "Evening arrival in La Paz."
+    ]
+  },
+  {
+    "date": "2025-02-01",
+    "dayNumber": 21,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-02",
+    "dayNumber": 22,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-03",
+    "dayNumber": 23,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-04",
+    "dayNumber": 24,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-05",
+    "dayNumber": 25,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-06",
+    "dayNumber": 26,
+    "location": "La Paz",
+    "activities": [
+      "Free Days",
+      "Airbnb stay"
+    ]
+  },
+  {
+    "date": "2025-02-07",
+    "dayNumber": 27,
+    "location": "La Paz",
+    "activities": [
+      "Start of Bolivia Discovery tour",
+      "Welcome meeting",
+      "Free time to explore before evening meeting"
+    ]
+  },
+  {
+    "date": "2025-02-08",
+    "dayNumber": 28,
+    "location": "Sucre",
+    "activities": [
+      "Flight to Sucre (1 hour)",
+      "Explore Constitutional Capital with CEO"
+    ]
+  },
+  {
+    "date": "2025-02-09",
+    "dayNumber": 29,
+    "location": "Sucre",
+    "activities": [
+      "Free day to explore Sucre",
+      "Optional hiking and mountain biking",
+      "Optional visit to Textile Cooperative"
+    ]
+  },
+  {
+    "date": "2025-02-10",
+    "dayNumber": 30,
+    "location": "Sucre",
+    "activities": [
+      "Free day in Sucre",
+      "Optional visit to dinosaur footprints",
+      "Optional visit to Tarabuco market"
+    ]
+  },
+  {
+    "date": "2025-02-11",
+    "dayNumber": 31,
+    "location": "Potosí",
+    "activities": [
+      "Travel to Potosí (3 hour drive)",
+      "Afternoon city exploration",
+      "Optional silver mine visit"
+    ]
+  },
+  {
+    "date": "2025-02-12",
+    "dayNumber": 32,
+    "location": "Uyuni",
+    "activities": [
+      "Travel to Uyuni (4 hour drive)",
+      "Preparation for salt flats excursion"
+    ]
+  },
+  {
+    "date": "2025-02-13",
+    "dayNumber": 33,
+    "location": "Salt Flats",
+    "activities": [
+      "Begin 3-day 4x4 excursion",
+      "Visit to Jukil Community Lodge",
+      "Guided walk to sacred Jukil mountaintop",
+      "Traditional community dinner"
+    ]
+  },
+  {
+    "date": "2025-02-14",
+    "dayNumber": 34,
+    "location": "Salt Flats",
+    "activities": [
+      "Continue Salt Flats exploration",
+      "Visit to Laguna Colorada",
+      "Overnight in desert oasis community"
+    ]
+  },
+  {
+    "date": "2025-02-15",
+    "dayNumber": 35,
+    "location": "La Paz",
+    "activities": [
+      "Final day exploring Salt Flats",
+      "Overnight bus to La Paz (8 hours)"
+    ]
+  },
+  {
+    "date": "2025-02-16",
+    "dayNumber": 36,
+    "location": "La Paz",
+    "activities": [
+      "Free day in La Paz",
+      "Optional Death Road biking",
+      "Visit to Witches' Market",
+      "Tour ends - depart any time"
+    ]
+  }
+]
+
