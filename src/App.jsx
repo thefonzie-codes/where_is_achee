@@ -22,6 +22,15 @@ const isToday = (dateString) => {
     return dateString === today;
 };
 
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+};
+
 function TodayActivities({ date, className }) {
     const today = itinerary.find(day => day.date === date);
 
@@ -38,7 +47,7 @@ function TodayActivities({ date, className }) {
                     <div className="activity-list">
                         <div className="activity-item">
                             <span className="bullet">•</span>
-                            <p>The journey starts on {tripStart}</p>
+                            <p>The journey starts on {formatDate(tripStart)}</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +62,7 @@ function TodayActivities({ date, className }) {
                     <div className="activity-list">
                         <div className="activity-item">
                             <span className="bullet">•</span>
-                            <p>The journey ended on {tripEnd}</p>
+                            <p>The journey ended on {formatDate(tripEnd)}</p>
                         </div>
                     </div>
                 </div>
@@ -123,7 +132,7 @@ function App() {
         <>
             <header className="app-header">
                 <h1>Where is Achee?</h1>
-                <h2>{showDate}</h2>
+                <h2>{formatDate(showDate)}</h2>
                 <p>South America Edition</p>
             </header>
             <div className="carousel">

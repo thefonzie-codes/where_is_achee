@@ -184,13 +184,12 @@ body {
   margin-bottom: 1.2rem;
   padding: 1rem;
   border-radius: 12px;
-  transition: all 0.2s ease;
   background: rgba(255, 255, 255, 0.7);
 }
 
 .activity-item:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.7);
+  transform: none;
 }
 
 .bullet {
@@ -204,6 +203,58 @@ body {
   font-size: 1.1rem;
   margin: 0;
   flex: 1;
+}
+
+/* Map styles */
+.map-container {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 250px;
+}
+
+.map-container iframe {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.map-container:hover iframe {
+  transform: scale(1.02);
+}
+
+/* Map loading styles */
+.map-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+.map-loading p {
+  color: var(--textLight);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.map-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--accent);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 /* Password gate styles */
@@ -249,16 +300,6 @@ body {
   animation: slideIn 0.3s ease-out;
 }
 
-.password-gate form::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
-}
-
 .password-input {
   width: 100%;
   padding: 1rem;
@@ -293,44 +334,12 @@ body {
   letter-spacing: 1px;
 }
 
-.password-gate button:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.password-gate button:active {
-  transform: translateY(0);
-}
-
 .error-message {
   color: var(--primary);
   margin-top: 1rem;
   font-size: 0.9rem;
   font-weight: 500;
   animation: shake 0.5s ease-in-out;
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
-}
-
-/* Responsive design for password gate */
-@media (max-width: 768px) {
-  .password-gate form {
-    margin: 1rem;
-    padding: 2rem;
-  }
-
-  .password-gate h1 {
-    font-size: 2rem;
-  }
-
-  .password-gate p {
-    font-size: 1rem;
-  }
 }
 
 /* Animations */
@@ -345,224 +354,19 @@ body {
   }
 }
 
-/* Responsive design */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  .carousel {
-    gap: 0.5rem;
-    padding: 0 0.5rem;
-  }
-  
-  .carousel button {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-  
-  .activity-card {
-    padding: 1.5rem 1rem;
-    margin: 0 0.5rem;
-    min-width: unset;
-    width: calc(100% - 2rem);
-  }
-  
-  .activity-card h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .activity-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .activity-card h3::after {
-    width: 40px;
-    bottom: -1rem;
-  }
-
-  .app-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .app-header h2 {
-    font-size: 1rem;
-  }
-
-  .app-header p {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-  }
-
-  /* Map container adjustments */
-  .map-container {
-    margin: 1.5rem 0;
-    height: 200px;
-  }
-
-  .map-container iframe {
-    height: 200px;
-  }
-
-  /* Activity list adjustments */
-  .activity-list {
-    padding: 0;
-    margin-top: 1.5rem;
-  }
-
-  .activity-item {
-    padding: 0.8rem;
-    margin-bottom: 0.8rem;
-    gap: 0.8rem;
-  }
-
-  .activity-item p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .bullet {
-    font-size: 1.2rem;
-  }
-
-  /* Password gate adjustments */
-  .password-gate {
-    padding: 1rem;
-  }
-
-  .password-gate form {
-    padding: 1.5rem;
-    margin: 1rem 0.5rem;
-  }
-
-  .password-input {
-    padding: 0.8rem;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .password-gate button {
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-}
-
-/* Additional mobile optimizations */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .app-header h1 {
-    font-size: 1.6rem;
-  }
-
-  .activity-card {
-    border-radius: 15px;
-  }
-
-  .carousel {
-    gap: 0.25rem;
-  }
-
-  .carousel button {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-  }
-}
-
-/* Add swipe hint animation */
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
-}
-
-/* Improve touch targets */
-@media (hover: none) and (pointer: coarse) {
-  .activity-item {
-    min-height: 44px; /* Minimum touch target size */
-  }
-
-  .password-input, 
-  .password-gate button {
-    min-height: 44px;
-  }
-
-  /* Disable hover effects on touch devices */
-  .activity-item:hover {
-    transform: none;
-  }
-
-  .map-container:hover iframe {
-    transform: none;
-  }
-}
-
-/* Add pull-to-refresh visual */
-@media (max-width: 768px) {
-  .carousel {
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  .activity-card {
-    transition: transform 0.3s ease;
-  }
-
-  .activity-card.swiping {
-    transform: scale(0.98);
-  }
-}
-
-/* Ensure the carousel container doesn't interfere with swipes */
-@media (max-width: 768px) {
-    .carousel {
-        overflow: visible;
-        gap: 0.5rem;
-    }
-
-    .activity-card {
-        width: calc(100% - 2rem);
-        margin: 0 1rem;
-    }
-}
-
-/* Map styles */
-.map-container {
-    margin: 2rem 0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1;
-}
-
-.map-container iframe {
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.map-container:hover iframe {
-    transform: scale(1.02);
-}
-
-/* Update activity card to accommodate map */
-.activity-card {
-    max-width: 800px;
-}
-
-/* Adjust activity list margin for map */
-.activity-list {
-    margin-top: 2rem;
-}
-
-/* Update mobile styles */
-@media (max-width: 768px) {
-  /* Header adjustments */
   .app-header {
     padding: 1rem 0.5rem;
   }
@@ -583,7 +387,19 @@ body {
     margin: 0.3rem 0;
   }
 
-  /* Card adjustments */
+  .carousel {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .carousel button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
   .activity-card {
     padding: 1.2rem 1rem;
     margin: 0 0.5rem;
@@ -601,7 +417,6 @@ body {
     margin-bottom: 2rem;
   }
 
-  /* Activity list adjustments */
   .activity-list {
     padding: 0;
     margin-top: 1rem;
@@ -613,17 +428,21 @@ body {
     gap: 0.6rem;
   }
 
-  .activity-item p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+  .map-container {
+    margin: 1.5rem 0;
+    height: 200px;
   }
 
-  .bullet {
-    font-size: 1rem;
+  .password-gate {
+    padding: 1rem;
+  }
+
+  .password-gate form {
+    padding: 1.5rem;
+    margin: 1rem 0.5rem;
   }
 }
 
-/* Smaller screen optimizations */
 @media (max-width: 480px) {
   .carousel {
     gap: 0.25rem;
@@ -651,87 +470,33 @@ body {
     margin-bottom: 1.5rem;
   }
 
-  .activity-item {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .activity-item p {
-    font-size: 0.85rem;
-    line-height: 1.3;
-  }
-
-  /* Map adjustments */
   .map-container {
-    margin: 1rem 0;
-    height: 180px;
+    min-height: 180px;
   }
 
-  .map-container iframe {
-    height: 180px;
+  .map-loading-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+
+  .map-loading p {
+    font-size: 0.8rem;
   }
 }
 
-/* Map loading styles */
-.map-loading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
-    z-index: 2;
-}
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .activity-item {
+    min-height: 44px;
+  }
 
-.map-loading p {
-    color: var(--textLight);
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    font-weight: 500;
-}
+  .password-input, 
+  .password-gate button {
+    min-height: 44px;
+  }
 
-.map-loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--accent);
-    border-top: 3px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Update map container for loading state */
-.map-container {
-    position: relative;
-    margin: 2rem 0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    background: rgba(255, 255, 255, 0.5);
-    min-height: 250px;
-}
-
-@media (max-width: 480px) {
-    .map-container {
-        min-height: 180px;
-    }
-
-    .map-loading-spinner {
-        width: 30px;
-        height: 30px;
-        border-width: 2px;
-    }
-
-    .map-loading p {
-        font-size: 0.8rem;
-    }
+  .map-container:hover iframe {
+    transform: none;
+  }
 }
