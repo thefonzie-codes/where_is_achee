@@ -24,7 +24,7 @@ function PasswordGate({ onCorrectPassword, children }) {
     return (
         <div className="password-gate">
             <h1>Where is Achee?</h1>
-            <p>Enter the password to track Achee's journey</p>
+            <p>You ain't seeing this if we don't know you <br/> Beat it weirdo 😤</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="password"

@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-01-11",
+    "dayNumber": 0,
+    "location": "Toronto, Ontario",
+    "activities": [
+      "The adventure begins! Flying out! 🛫🌍"
+    ]
+  },
+  {
     "date": "2025-01-12",
     "dayNumber": 1,
     "location": "Lima",
@@ -31,7 +39,7 @@
   {
     "date": "2025-01-15",
     "dayNumber": 4,
-    "location": "Overnight Bus to Arequipa",
+    "location": "Arequipa",
     "activities": [
       "Optional flight over Nazca Lines.",
       "Tour of Nazca Desert Cemetery and Pottery Studio.",
@@ -73,7 +81,7 @@
   {
     "date": "2025-01-19",
     "dayNumber": 8,
-    "location": "Overnight Bus to Cusco",
+    "location": "Cusco",
     "activities": [
       "Explore Arequipa.",
       "Optional city tour or museum visits.",
@@ -353,6 +361,23 @@
       "Optional Death Road biking",
       "Visit to Witches' Market",
       "Tour ends - depart any time"
+    ]
+  },
+  {
+    "date": "2025-02-17",
+    "dayNumber": 37,
+    "location": "La Paz",
+    "activities": [
+      "Free day in La Paz"
+    ]
+  },
+  {
+    "date": "2025-02-18",
+    "dayNumber": 38,
+    "location": "Lima",
+    "activities": [
+      "Fly to Lima",
+      "Fly to Toronto!"
     ]
   }
 ]
